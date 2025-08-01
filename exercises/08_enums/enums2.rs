@@ -7,6 +7,16 @@ struct Point {
 #[derive(Debug)]
 enum Message {
     // TODO: Define the different variants used below.
+
+    // this is so stupid, why do I have to define the fields like this?
+
+    Resize { width: u32, height: u32 },
+    Move(Point),
+    Echo(String),
+    ChangeColor(u8, u8, u8),
+    Quit,
+
+    // ... Oh, that's why. Okay, I get it now.
 }
 
 impl Message {

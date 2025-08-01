@@ -24,14 +24,15 @@ impl Package {
     }
 
     // TODO: Add the correct return type to the function signature.
-    fn is_international(&self) {
-        // TODO: Read the tests that use this method to find out when a package
-        // is considered international.
+    // This function checks if the package is international.
+    fn is_international(&self) -> bool {
+        self.sender_country != self.recipient_country // i guess this is how you check if two strings are equal in Rust?
     }
 
     // TODO: Add the correct return type to the function signature.
-    fn get_fees(&self, cents_per_gram: u32) {
-        // TODO: Calculate the package's fees.
+    // This function calculates the transport fees based on the weight of the package.
+    fn get_fees(&self, cents_per_gram: u32) -> u32 {
+        self.weight_in_grams * cents_per_gram // This is how you multiply two numbers in Rust, right?
     }
 }
 

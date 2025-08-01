@@ -11,6 +11,9 @@ This repository is purely for documentation — tracking my learning journey and
 - **Session 1:** Completed Sections 0–6  
   - Took around 2.5 hours  
   - Getting familiar with Rust syntax and compiler feedback
+- **Session 2:** Completed Sections 7-9
+  - Took around 1.25 hours because I was an idiot with the enums
+  - Glad its over
 
 ## Environment
 

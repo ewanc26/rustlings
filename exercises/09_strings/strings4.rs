@@ -13,25 +13,22 @@ fn string(arg: String) {
 // Your task is to replace `placeholder(…)` with either `string_slice(…)`
 // or `string(…)` depending on what you think each value is.
 fn main() {
-    placeholder("blue");
+    string_slice("blue");
+    string("red".to_string());
+    string(String::from("hi"));
+    string("rust is fun!".to_owned());
+    string("nice weather".into());
+    string(format!("Interpolation {}", "Station"));
 
-    placeholder("red".to_string());
-
-    placeholder(String::from("hi"));
-
-    placeholder("rust is fun!".to_owned());
-
-    placeholder("nice weather".into());
-
-    placeholder(format!("Interpolation {}", "Station"));
+    // that certainly won't get confusing...
 
     // WARNING: This is byte indexing, not character indexing.
     // Character indexing can be done using `s.chars().nth(INDEX)`.
-    placeholder(&String::from("abc")[0..1]);
+    string_slice(&String::from("abc")[0..1]); // slice of a String -> &str
 
-    placeholder("  hello there ".trim());
+    string_slice("  hello there ".trim()); // trim returns &str
 
-    placeholder("Happy Monday!".replace("Mon", "Tues"));
+    string("Happy Monday!".replace("Mon", "Tues")); // replace returns a new String
 
-    placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase()); // to_lowercase returns a new String... also, ew that connotation is gross.
 }
