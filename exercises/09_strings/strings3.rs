@@ -1,13 +1,22 @@
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
+    input.trim() // This is how you remove whitespace from both ends of a string in Rust.
+    // I guess I could have also used input.trim_start().trim_end() but this is
+    // more concise and easier to read.
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
+    format!("{input} world!") // This is how you format a string in Rust.
+    // I could also use input.to_string() + " world!" but this is more concise
+    // and easier to read.
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    input.replace("cars", "balloons") // This is how you replace a substring in a string in Rust.
+    // I could also use input.to_string().replace("cars", "balloons") but
+    // this is more concise and easier to read.
 }
 
 fn main() {
