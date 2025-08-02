@@ -5,7 +5,8 @@ mod sausage_factory {
         String::from("Ginger")
     }
 
-    fn make_sausage() {
+    pub fn make_sausage() { // I mean... pubs do make sausages for dishes like bangers and mash.
+        // This function is public, so it can be called from outside this module.
         get_secret_recipe();
         println!("sausage!");
     }

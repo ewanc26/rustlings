@@ -14,6 +14,9 @@ This repository is purely for documentation — tracking my learning journey and
 - **Session 2:** Completed Sections 7-9
   - Took around 1.25 hours because I was an idiot with the enums
   - Glad its over
+- **Session 3:** Completed Sections 10-12
+  - Took around 45 minutes
+  - Not that bad compared to Session 2
 
 ## Environment
 
