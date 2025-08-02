@@ -6,6 +6,9 @@
 // number of goals the team scored, and the total number of goals the team
 // conceded.
 
+// hah, beat france in the football. get fucked france.
+// jk, i like france. they have a good football team.
+
 use std::collections::HashMap;
 
 // A structure to store the goal details of a team.
@@ -31,6 +34,16 @@ fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
         // Keep in mind that goals scored by team 1 will be the number of goals
         // conceded by team 2. Similarly, goals scored by team 2 will be the
         // number of goals conceded by team 1.
+
+        // If the team is not already in the scores table, insert it with a default score.
+        scores.entry(team_1_name).or_default();
+        scores.entry(team_2_name).or_default();
+        // Update the scores for team 1.
+        scores.get_mut(team_1_name).unwrap().goals_scored += team_1_score;
+        scores.get_mut(team_1_name).unwrap().goals_conceded += team_2_score;
+        // Update the scores for team 2.
+        scores.get_mut(team_2_name).unwrap().goals_scored += team_2_score;
+        scores.get_mut(team_2_name).unwrap().goals_conceded += team_1_score;
     }
 
     scores

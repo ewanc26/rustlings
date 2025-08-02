@@ -28,6 +28,19 @@ mod my_module {
 
     // TODO: Complete the function as described above.
     // pub fn transformer(input: ???) -> ??? { ??? }
+    pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
+        input
+            .into_iter()
+            .map(|(s, command)| match command {
+                Command::Uppercase => s.to_uppercase(),
+                Command::Trim => s.trim().to_string(),
+                Command::Append(n) => format!("{}{}", s, "bar".repeat(n)),
+            })
+            .collect()
+    }
+    // This is like a list comprehension in Python, but with `map` and `collect`.
+    // In Python, it would be like:
+    // return [s.upper() if command == "uppercase" else s.strip() if command == "trim" else s + "bar" * n for s, command in input]
 }
 
 fn main() {
@@ -39,6 +52,7 @@ mod tests {
     // TODO: What do we need to import to have `transformer` in scope?
     // use ???;
     use super::Command;
+    use crate::my_module::transformer; // Import the transformer function from the module.
 
     #[test]
     fn it_works() {
