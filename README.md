@@ -17,6 +17,10 @@ This repository is purely for documentation — tracking my learning journey and
 - **Session 3:** Completed Sections 10-12
   - Took around 45 minutes
   - Not that bad compared to Session 2
+- **Session 4:** Completed Section 13
+  - Took around 2 hours
+  - "I got 99 problems and ***all of them are the compiler screaming at me***"
+  - I got very distracted with other stuff. I'm restless.
 
 ## Environment
 
