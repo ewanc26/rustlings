@@ -1,18 +1,24 @@
 // This powerful wrapper provides the ability to store a positive integer value.
 // TODO: Rewrite it using a generic so that it supports wrapping ANY type.
-struct Wrapper {
-    value: u32,
+
+// Generic wrapper that can hold any type `T`
+struct Wrapper<T> {
+    value: T,
 }
 
-// TODO: Adapt the struct's implementation to be generic over the wrapped value.
-impl Wrapper {
-    fn new(value: u32) -> Self {
+// Implement a constructor for Wrapper
+impl<T> Wrapper<T> {
+    fn new(value: T) -> Self { // Create a new Wrapper instance with the given value
         Wrapper { value }
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    let int_wrapper = Wrapper::new(42);
+    let str_wrapper = Wrapper::new("Foo"); // Now we can wrap a string as well!
+
+    println!("int_wrapper: {}", int_wrapper.value);
+    println!("str_wrapper: {}", str_wrapper.value);
 }
 
 #[cfg(test)]

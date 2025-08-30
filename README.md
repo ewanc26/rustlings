@@ -21,6 +21,9 @@ This repository is purely for documentation — tracking my learning journey and
   - Took around 2 hours
   - "I got 99 problems and ***all of them are the compiler screaming at me***"
   - I got very distracted with other stuff. I'm restless.
+- **Session 5:** Completed Sections 14-15
+  - Took around 30 minutes
+  - I just wanted to stretch a bit.
 
 ## Environment
 

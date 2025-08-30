@@ -6,6 +6,9 @@ trait AppendBar {
 
 impl AppendBar for String {
     // TODO: Implement `AppendBar` for the type `String`.
+    fn append_bar(self) -> Self {
+        format!("{}Bar", self) // Append "Bar" to the string and return the new string. Fairly weird syntax but sure, why not. it was easy enough.
+    }
 }
 
 fn main() {
